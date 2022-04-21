@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
+import { Component } from 'react';
+import CampsiteInfo from '../components/CampsiteInfoComponent';
+import Header from '../components/HeaderComponent';
+import Directory from '../components/DirectoryComponent';
+import Footer from '../components/FooterComponent';
+
 
 
 const mapStateToProps = state => {
