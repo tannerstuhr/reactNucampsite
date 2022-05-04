@@ -1,0 +1,11 @@
+.contact-info{
+    color: rgb(214, 214, 214);
+}
+
+.contact-info:hover{
+    color: black;
+}
+
+.btn{
+    color: burlywood;
+}

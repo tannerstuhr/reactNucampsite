@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import { Control, Form, actions, Errors} from 'react-redux-form';
+import '../css/ContactComponent.css'
 
 const required = val => val && val.length; 
 const maxLength = len => val => !val || (val.length <= len);
@@ -53,7 +54,7 @@ class Contact extends Component {
           <div className="col">
             <Breadcrumb>
               <BreadcrumbItem>
-                <Link to="home">Home</Link>
+                <Link to="home" className='home-breadcrumb'>Home</Link>
               </BreadcrumbItem>
               <BreadcrumbItem active>Contact Us</BreadcrumbItem>
             </Breadcrumb>
@@ -73,12 +74,12 @@ class Contact extends Component {
               U.S.A.
             </address>
           </div>
-          <div className="col">
-            <a role="button" className="btn btn-link" href="tel:+12065551234">
+          <div className="col contact-info">
+            <a role="button" className="btn contact-info" href="tel:+12065551234">
               <i className="fa fa-phone" /> 1-206-555-1234
             </a>
             <br />
-            <a role="button" className="btn btn-link" href="mailto:fakeemail@fakeemail.co">
+            <a role="button" className="btn contact-info" href="mailto:fakeemail@fakeemail.co">
               <i className="fa fa-envelope-o" /> campsites@nucamp.co
             </a>
           </div>
@@ -243,7 +244,7 @@ class Contact extends Component {
               </Row>
               <Row className="form-group">
                 <Col md={{size: 10, offset: 2}}>
-                  <Button type="submit" color="primary">
+                  <Button type="submit" color="success">
                     Send Feedback
                   </Button>
                 </Col>

@@ -1,0 +1,11 @@
+.site-footer{
+    color: rgb(240, 240, 240);
+}
+
+.link{
+    color: white;
+}
+
+.link:hover{
+    color: rgb(232, 152, 94)
+}

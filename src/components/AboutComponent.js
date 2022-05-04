@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {baseUrl} from '../shared/baseUrl';
 import {Loading} from './LoadingComponent';
 import {Fade, Stagger} from 'react-animation-components';
+import '../css/AboutComponent.css'
 
 function RenderPartner({partner}) {
   if ({partner}) {
@@ -57,7 +58,9 @@ function About(props) {
         <div className="col">
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link to="/home">Home</Link>
+              <Link to="/home" className="home-breadcrumb">
+                Home
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbItem active>About Us</BreadcrumbItem>
           </Breadcrumb>
@@ -79,7 +82,7 @@ function About(props) {
         </div>
         <div className="col-sm-6">
           <Card>
-            <CardHeader className="bg-primary text-white">
+            <CardHeader className="text-white card-header">
               <h3>Facts At a Glance</h3>
             </CardHeader>
             <CardBody>

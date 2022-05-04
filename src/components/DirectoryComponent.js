@@ -56,7 +56,9 @@ function Directory(props) {
         <div className="col">
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link to="home">Home</Link>
+              <Link to="home" className="home-breadcrumb">
+                Home
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbItem active>Directory</BreadcrumbItem>
           </Breadcrumb>

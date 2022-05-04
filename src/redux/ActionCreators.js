@@ -205,11 +205,10 @@ export const postFeedback = (feedback) => () => {
         if (response.ok) {
           alert('Thank you for your feedback!\n' + JSON.stringify(feedback));
           return response;
-        } else {
-          const error = new Error(`Error ${response.status}: ${response.statusText}`);
-          error.response = response;
-          throw error;
         }
+        const error = new Error(`Error ${response.status}: ${response.statusText}`);
+        error.response = response;
+        throw error;
       },
       error => {
         throw error;

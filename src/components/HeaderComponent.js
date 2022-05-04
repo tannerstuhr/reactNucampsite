@@ -45,17 +45,14 @@ class Header extends Component {
             <div className="row">
               <div className="col">
                 <h1>NuCamp</h1>
-                <h2>a better way to camp</h2>
+                <h2>A better way to camp</h2>
               </div>
             </div>
           </div>
         </Jumbotron>
 
-        <Navbar dark sticky="top" expand="md">
+        <Navbar dark sticky="top" expand="md" className="mb-2">
           <div className="container">
-            <NavbarBrand className="mr-auto" href="/">
-              <img src="/assets/images/logo.png" height="30" width="30" alt="logo" />
-            </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
@@ -73,7 +70,7 @@ class Header extends Component {
                 </NavLink>
               </Nav>
               <span className="navbar-text ml-auto">
-                <Button outline onClick={this.toggleModal}>
+                <Button outline onClick={this.toggleModal} className="login-btn">
                   <i className="fa fa-sign-in fa-lg" /> Login
                 </Button>
               </span>
