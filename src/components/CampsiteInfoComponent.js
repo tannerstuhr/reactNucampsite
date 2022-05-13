@@ -12,14 +12,13 @@ import {
   ModalBody,
   Label,
   Row,
-  Button
+  Button,
 } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import {Control, LocalForm, Errors} from 'react-redux-form';
-import { Loading } from './LoadingComponent';
+import {Loading} from './LoadingComponent';
 import {baseUrl} from '../shared/baseUrl';
 import {FadeTransform, Fade, Stagger} from 'react-animation-components';
-
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || val.length <= len;
@@ -37,7 +36,7 @@ class CommentForm extends Component {
 
   toggleModal() {
     this.setState({
-      isModalOpen: !this.state.isModalOpen
+      isModalOpen: !this.state.isModalOpen,
     });
   }
 
@@ -70,7 +69,7 @@ class CommentForm extends Component {
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="4">5</option>
+                    <option value="5">5</option>
                   </Control.select>
                 </div>
                 <div className="form-group">
@@ -176,18 +175,18 @@ function RenderComments({comments, postComment, campsiteId}) {
 function CampsiteInfo(props) {
   if (props.isLoading) {
     return (
-      <div className='container'>
-        <div className='row'>
+      <div className="container">
+        <div className="row">
           <Loading />
         </div>
       </div>
     );
   }
-  if (props.errMess){
+  if (props.errMess) {
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col'>
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <h4>{props.errMess}</h4>
           </div>
         </div>
@@ -201,7 +200,9 @@ function CampsiteInfo(props) {
           <div className="col">
             <Breadcrumb>
               <BreadcrumbItem>
-                <Link to="/directory" className='home-breadcrumb'>Directory</Link>
+                <Link to="/directory" className="home-breadcrumb">
+                  Directory
+                </Link>
               </BreadcrumbItem>
               <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
             </Breadcrumb>
@@ -211,8 +212,8 @@ function CampsiteInfo(props) {
         </div>
         <div className="row">
           <RenderCampsite campsite={props.campsite} />
-          <RenderComments 
-            comments={props.comments} 
+          <RenderComments
+            comments={props.comments}
             postComment={props.postComment}
             campsiteId={props.campsite.id}
           />

@@ -18,7 +18,7 @@ This button when viewing a campsite will allow users to rate a campsite and the 
 
 ## `Contact Component`
 
-Allows user to contact through a form
+Allows user to contact through a form.
 Info gets stored to db.json 
 
 ## `Loading Component`
